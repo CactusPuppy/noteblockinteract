@@ -1,6 +1,6 @@
 {
     "pack": {
         "pack_format": 1, 
-        "description": "Run /scoreboard players set @s nb 1 to edit noteblocks."
+        "description": "Prevents unwanted noteblock interactions"
     }
 }
