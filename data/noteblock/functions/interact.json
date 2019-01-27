@@ -1,0 +1,3 @@
+tag @e[type=minecraft:player,scores={interact=1..},limit=1,sort=nearest] add undo
+tag @a[tag=undo,scores={nb=1..}] remove undo
+execute if entity @a[tag=undo,scores={interact=1..}] run function noteblock:
