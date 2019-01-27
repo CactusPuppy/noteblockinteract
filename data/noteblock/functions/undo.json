@@ -1,0 +1,1 @@
+tellraw @a "Undo function triggered"

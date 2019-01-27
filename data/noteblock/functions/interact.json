@@ -1,3 +1,15 @@
-tag @e[type=minecraft:player,scores={interact=1..},limit=1,sort=nearest] add undo
-tag @a[tag=undo,scores={nb=1..}] remove undo
-execute if entity @a[tag=undo,scores={interact=1..}] run function noteblock:
+# Tag the nearest player which has interacted with undo
+tag @a[scores={interact=1..},limit=1,sort=nearest] add undo
+
+# If that player is allowed to interact, remove the undo tag
+tag @a[tag=undo,scores={nb=1..,interact=1..}] remove undo
+
+# If we still have the undo tag, undo the interaction
+execute if entity @a[tag=undo,scores={interact=1..}] run function noteblock:undo
+
+# Untag the player and reset the interact score to 0
+scoreboard players set @a[tag=undo,scores={interact=1..}] interact 0
+tag @a[tag=undo,scores={interact=1..}] remove undo
+
+# Loop back to beginning if we detect more players who interacted
+execute if entity @a[scores={interact=1..}] run function noteblock:interact
