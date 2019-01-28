@@ -4,7 +4,7 @@ execute if score @p[scores={interact=1..}] nb_allow matches 1 run scoreboard pla
 
 
 # If we still have the undo tag, undo the interaction
-execute if score Global do_undo matches 1 run function noteblock:undo
+execute if score Global do_undo matches 1 as @p[scores={interact=1..}] run function noteblock:undo
 
 # Reset do_undo and set player score to 0
 scoreboard players set @p[scores={interact=1..}] interact 0
