@@ -1,7 +1,7 @@
 kill @e[type=minecraft:area_effect_cloud,name=nb_Tracer]
 execute at @s positioned ~ ~ ~ run summon minecraft:area_effect_cloud ~ ~ ~ {"Duration":2147483647,"CustomName":"\"nb_Tracer\""}
 tp @e[type=minecraft:area_effect_cloud,name=nb_Tracer] @s
-execute as @e[type=minecraft:area_effect_cloud,name=nb_Tracer] at @s run tp @s ~ ~1.6 ~
+execute as @e[type=minecraft:area_effect_cloud,name=nb_Tracer] at @s run tp @s ~ ~1.62 ~
 scoreboard players set Global continue 1
 scoreboard players set Global ticks 0
 function noteblock:raytrace
