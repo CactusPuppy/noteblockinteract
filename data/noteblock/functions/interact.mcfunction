@@ -1,4 +1,4 @@
-# Set do_undo to 1 unless the trigger0ing player is allowed
+# Set do_undo to 1 unless the triggering player is allowed
 execute if entity @p[scores={trigger0=1..}] run scoreboard players set Global do_undo 1
 execute if score @p[scores={trigger0=1..}] nb_allow matches 1 run scoreboard players set Global do_undo 0
 
