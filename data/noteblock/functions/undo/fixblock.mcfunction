@@ -1,0 +1,1 @@
+execute if block ~ ~ ~ minecraft:note_block run function noteblock:undo/fb-note_block

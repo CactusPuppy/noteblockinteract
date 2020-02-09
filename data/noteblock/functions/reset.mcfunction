@@ -1,7 +1,6 @@
-scoreboard objectives add trigger0 minecraft.custom:minecraft.tune_noteblock
+scoreboard objectives add nb_tune_trigger minecraft.custom:minecraft.tune_noteblock
+scoreboard objectives add nb_punch_trigger minecraft.custom:minecraft.play_noteblock
+scoreboard objectives add nb_sneak minecraft.custom:minecraft.sneak_time
 scoreboard objectives add nb_allow dummy
-scoreboard objectives add do_undo dummy
-scoreboard objectives add ticks dummy
-scoreboard objectives add continue dummy
-scoreboard players set MAXTICKS ticks 500
+scoreboard objectives add nb_ticks dummy
 say Loaded NoteblockInteract v1.0 by CactusPuppy

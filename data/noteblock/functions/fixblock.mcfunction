@@ -1,1 +1,0 @@
-execute as @e[type=minecraft:area_effect_cloud,name=nb_Tracer,limit=1] at @s if block ~ ~ ~ minecraft:note_block run function noteblock:fb-note_block
