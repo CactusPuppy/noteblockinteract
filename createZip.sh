@@ -1,1 +1,1 @@
-"C:\Program Files\7-Zip\7z.exe" a -tzip -r noteblockinteract.zip data/ pack.mcmeta
+"C:\Program Files\7-Zip\7z.exe" a -tzip -r out/noteblockinteract.zip data/ pack.mcmeta
