@@ -16,14 +16,25 @@ var instruments = ["banjo", "basedrum", "bass", "bell", "bit", "chime", "cow_bel
 function generateUndoCommands() {
     var result = "";
     const noteLimit = 25;
-    const subBy = 2 % noteLimit;
+    const subBy = 1;
     for (var note = 0; note < noteLimit; note++) {
         result += `
-execute if block ~ ~ ~ minecraft:note_block[note=${note}] run setblock ~ ~ ~ minecraft:note_block[note=${note-subBy < 0 ? noteLimit + note - subBy  : note-subBy}]`;
+execute if score @s nb_note matches ${note} run setblock ~ ~ ~ minecraft:note_block[note=${note-subBy < 0 ? noteLimit + note - subBy  : note-subBy}]`;
     }
     result += `
 # Trigger noteblock instrument update
 clone ~ ~-1 ~ ~ ~-1 ~ ~ ~-1 ~ replace force`;
     console.log(result);
 }
+
+function generateScoreSetters() {
+    var result = "";
+    const noteLimit = 25;
+    for (var note = 0; note < noteLimit; note++) {
+        result += `
+execute if block ~ ~ ~ minecraft:note_block[note=${note}] run scoreboard players set @s nb_note ${note}`;
+    }
+    console.log(result);
+}
+generateScoreSetters();
 generateUndoCommands();
