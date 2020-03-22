@@ -3,4 +3,5 @@ scoreboard objectives add nb_punch_trigger minecraft.custom:minecraft.play_noteb
 scoreboard objectives add nb_sneak minecraft.custom:minecraft.sneak_time
 scoreboard objectives add nb_allow dummy
 scoreboard objectives add nb_ticks dummy
-say Loaded NoteblockInteract v1.0 by CactusPuppy
+scoreboard objectives add nb_note dummy
+say Loaded NoteblockInteract v1.1 by CactusPuppy
